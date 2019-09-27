@@ -8,7 +8,7 @@
     <header>
       <nav>
         <a>
-          <img src="img/index-logo.svg" width"368" height="158" alt="Логотип барбершопа Бородинский">
+          <img src="img/index-logo.svg" width="368" height="158" alt="Логотип барбершопа Бородинский">
         </a>
         <ul>
           <li><a href="info.html">Информация</a></li>
@@ -19,15 +19,17 @@
         </ul>
         <ul>
           <li>
-            <button type="button">Войти</button>
+            <a href="login.html">Войти</a>
           </li>
         </ul>
       </nav>
     </header>
+
+
     
     <main>
       <h1>Барбершоп "Бородинский"</h1>
-     
+      
       <section>
         <h2>Преимущество</h2>
         <ul>
@@ -97,7 +99,33 @@
         <h2>Записаться</h2>
         <p>Укажите желаемую дату и время и мы свяжемся 
           с вами для потверждения брони</p>
-     </section>
+        <form action="http://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="appointment-date">Дата</label>
+            <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+          </p>
+          
+          <p>
+            <label for="appointment-time">Время</label>
+            <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+          </p>
+
+          <p>
+            <label for="appointment-name">Ваше имя</label>
+            <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+          </p>
+          
+          <p>
+            <label for="appointment-phone">Телефон</label>
+            <input id="appointment-phone" type="tel" name="phone" value="" placeholder="+7 123 456-78-90">
+          </p>
+          
+          <p>
+            <button type="submit">Отправить</button>
+          </p>
+        </form>
+      </section>
+
      
     </main>
    
@@ -111,9 +139,9 @@
       <div> 
       <p>Давайте дружить!</p>
         <ul>
-          <li><a href="#">Контакты</a></li>
-          <li><a href="#">Фейсбук</a></li>
-          <li><a href="#">Инстаграм</a></li>
+          <li><a href="#" aria-label="Контакты">Контакты</a></li>
+          <li><a href="#" aria-label="Фейсбук">Фейсбук</a></li>
+          <li><a href="#" aria-label="Инстаграм">Инстаграм</a></li>
         </ul>
       </div>
       <p>
@@ -121,14 +149,34 @@
         <a href="http://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
-    <section>
+    <section class="visually-hidden">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль</p>
+      <form action="https://echo.htmlacademy.ru" method="post" >
+        <p>
+          <label for="user-login">Логин</label>
+          <input id="user-login" type="text" name="login" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-password">Пароль</label>
+          <input id="user-password" type="text" name="password" placeholder="*********">
+        </p>
+        <p>
+          <input type="checkbox" name="remember" id="login-password-info">
+          <label for="login-password-info">Запомните меня</label>
+          <a href="#">Я забыл пароль!</a>
+        </p>
+        <button type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
-    <section>
+    <section class="visually-hidden">
       <h2>Как до нас добраться</h2>
-      <button type="button">Закрыть</button>
+      <p>
+        <img src="img/map.jpg" width="766"  height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </p>
+
+      <button type="button" aria-label="Закрыть">Закрыть</button>
     </section>
 
   </body>
