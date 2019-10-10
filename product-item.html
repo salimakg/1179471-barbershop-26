@@ -2,23 +2,25 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>HTML Academy: Барбершоп</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
+  <body class="inner-page">
 
-    <header>
-      <nav>
-        <a>
-          <img src="img/logo.svg" width"368" height="158" alt="Логотип барбершопа Бородинский">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/inner-logo.svg" width="368" height="158" alt="Логотип барбершопа Бородинский">
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="news.html">Новости</a></li>
           <li><a href="price.html">Прайс-лист</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
-        <ul>
+        <ul class="user-navigation">
           <li>
             <a href="login.html">Войти</a>
           </li>
@@ -35,16 +37,16 @@
 
     <main>
       <h1>Набор для путешествий "Baxter of California"</h1>
-      <nav>
+      <nav class="breadcrumb">
         <ul>
           <li><a href="index.html">Главная</a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="products.html">Средства для ухода</a></li>
-          <li><a href="#">Набор для путешествий "Baxter of California"</a></li>
+          <li><a href="#" class="active">Набор для путешествий "Baxter of California"</a></li>
         </ul>
       </nav>
 
-      <section>
+      <section class="item-photos">
         <figure>
           <a href="#"><img src="img/product-item1.jpg"  alt="Набор для путешествий Baxter of California"></a>
         </figure>
@@ -57,20 +59,20 @@
         </nav>
       </section>
 
-      <section>
-        <span>Есть в наличии</span>
-        <span>Артикул:dexter-Ae</span>
+      <section class="description">
+        <span class="availability">Есть в наличии</span>
+        <span class="brand">Артикул:dexter-Ae</span>
         <p>Travel Kit-необходимый аксессуар во время любого<br> 
           путешествия. В аккуратной кожаной сумке находится все, что <br>
           нужно для бритья и ухода за кожей во время рабочей поездки<br>
           или отдыха: средство для умывания, увлажняющий крем,<br>
           крем для бритья, крем после бритья, шампунь. Набор также может<br>
           стать отличным подарком.</p>
-        <span>2900P</span>
-        <a href="#">Купить</a>
+        <span class="price">2900P</span>
+        <a href="#" class="button">Купить</a>
       </section>
 
-      <section>
+      <section class="product-list">
         <h2>В набор входят:</h2>
         <ul>
           <li>Средство для умывание (50мл)</li>
@@ -82,64 +84,38 @@
       </section>
     </main>
 
-    <footer>
-        <p>
-          Барбершоп "Бородинский" <br>
-          Адрес:г. Санкт-Петербург, Б.Конюшенная.Д.19/8<br>
-          <a href="map.html">Как нас найти?</a><br>
-          Телефон:+7(495)666-02-66
-        </p>
-        <div> 
-        <p>Давайте дружить!</p>
-          <ul>
-            <li><a href="#" aria-label="Контакты">Контакты</a></li>
-            <li><a href="#" aria-label="Фейсбук">Фейсбук</a></li>
-            <li><a href="#" aria-label="Инстаграм">Инстаграм</a></li>
-          </ul>
-        </div>
-        <p>
-          Разработано:
-          <a href="http://htmlacademy.ru">HTML Academy</a>
-        </p>
-      </footer>
+  </footer>
+    
+    
+  <section class="visually-hidden modal">
+    <h2>Личный кабинет</h2>
+    <p>Введите свой логин и пароль</p>
+    <form action="https://echo.htmlacademy.ru" method="post" class="login-form">
+      <p>
+        <label for="user-login">Логин</label>
+        <input id="user-login" type="text" name="login" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="user-password">Пароль</label>
+        <input id="user-password" type="text" name="password" placeholder="*********">
+      </p>
+      <p>
+        <input type="checkbox" name="remember" id="login-password-info" class="login-checkbox">
+        <label for="login-password-info">Запомните меня</label>
+        <a href="#" class="restore">Я забыл пароль!</a>
+      </p>
+      <button class="button " type="submit">Войти</button>
+    </form>
+    <button  type="button">Закрыть</button>
+  </section>
+  <section class="visually-hidden map">
+    <h2>Как до нас добраться</h2>
+    <p>
+      <img src="img/map.jpg" width="766"  height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    </p>
 
-      <section class="visually-hidden">
-        <h2>Личный кабинет</h2>
-        <p>Введите свой логин и пароль</p>
-        <form action="https://echo.htmlacademy.ru" method="post" >
-          <p>
-            <label for="user-login">Логин</label>
-            <input id="user-login" type="text" name="login" placeholder="email@example.com">
-          </p>
-          <p>
-            <label for="user-password">Пароль</label>
-            <input id="user-password" type="text" name="password" placeholder="*********">
-          </p>
-          <p>
-            <input type="checkbox" name="remember" id="login-password-info">
-            <label for="login-password-info">Запомните меня</label>
-            <a href="#">Я забыл пароль!</a>
-          </p>
-          <button type="submit">Войти</button>
-        </form>
-        <button type="button">Закрыть</button>
-      </section>
+    <button type="button" aria-label="Закрыть">Закрыть</button>
+  </section>
 
-      <section class="visually-hidden">
-        <h2>Как до нас добраться</h2>
-        <p>
-          <img src="img/map.jpg" width="766"  height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        </p>
-  
-        <button type="button" aria-label="Закрыть">Закрыть</button>
-      </section>>
-
-
-
-      <section>
-        
-      </section>
-
-      
-  </body>
+</body>
 </html>
