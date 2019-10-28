@@ -28,6 +28,25 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 .button {
     font: inherit;
     text-align: center;
@@ -319,3 +338,319 @@ a {
     margin: 0;
     padding: 0;
 }
+
+/*------Сеточные стили------*/
+
+html,
+body {
+    min-width: 1122;
+    min-height: 1750px;
+}
+
+body {
+    /*Временно для сетки*/
+    
+    background-size: 1372px auto;
+    background-repeat: no-repeat;
+
+}
+
+.iner-page {
+
+    /*Временно для сетки*/
+    
+    background-size: 1200px;
+    background-position: top center;
+    background-repeat: no-repeat; 
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-header {
+    margin-bottom: 75px;
+    background-color: #000000;
+
+    /*Временно для сетки*/
+    min-height: 285px;
+}
+
+.inner-page .main-header {
+    margin-bottom: 50px;
+    /*Временно для сетки*/
+    min-height: 70px;
+
+
+}
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Временно для сетки*/
+    min-height: 285px;
+    background-colot: transparent;
+}
+
+.inner-page .main-navigation {
+    align-items: flex-start;
+    flex-direction: row;
+
+    /*Временно для сетки*/
+    min-height: 70px;
+
+}
+
+.main-header-logo {
+    width: 368px;
+    height: 153px;
+    order: 2;
+}
+
+.inner-page .main-header-logo {
+    order: 0;
+    width: 111px;
+    height: 24px;
+    padding: 23px 20px;
+
+}
+
+.main-navigation-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+
+    background-color: #000000;
+
+}
+
+
+
+.main-navigation-wrapper .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.site-navigation,
+.user-navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 620px;
+}
+
+.user-navigation {
+    display: flex;
+     width: 140px;
+}
+
+.user-navigation .login-link {
+    position: relative;
+    padding-left: 50px;
+}
+
+.login-link::before {
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    content: "";
+    width: 16px;
+    height: 18px;
+    
+    background-image: url(img/login1.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.site-navigation a,
+.user-navigation a {
+    display: block;
+    padding: 25px 20px;
+    vertical-align: middle;
+}
+.inner-page .user-navigation {
+    margin-left: auto;
+}
+
+.features {
+    margin-bottom: 80px;
+}
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    /*Временно для сетки*/
+    min-height: 170px;
+}
+
+.features-item {
+    width: 300px;
+    
+    /*Временно для сетки*/
+    min-height: 170px;
+}
+
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+
+    /*Временно для сетки*/
+    
+
+}
+
+.news {
+    width: 380px;
+    /*Временно для сетки*/
+    min-height: 315px;
+}
+
+.gallery {
+    width: 300px;
+    /*Временно для сетки*/
+    min-height: 315px;
+}
+
+.contacts {
+    width: 380px;
+    /*Временно для сетки*/
+    min-height: 295px;
+}
+
+.appointment {
+    width: 300px;
+    /*Временно для сетки*/
+    min-height: 340px;
+}
+
+.page-title {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    /*Временно для сетки*/
+    min-height: 42px;
+
+}
+
+.filters {
+    width: 180px;
+    /*Временно для сетки*/
+    min-height: 687px;
+
+}
+
+.catalog {
+    width: 700px;
+
+    /*Временно для сетки*/
+    min-height: 687px;
+}
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+
+    /*Временно для сетки*/
+    min-height: 24px;
+}
+
+.catalog-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 25px;
+}
+.catalog-item {
+    
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    /*Временно для сетки*/
+    min-height: 285px;
+}
+
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.pagination-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /*Временно для сетки*/
+    min-height: 47px;
+
+}
+.inner-page .main-footer {
+    margin-top: 45px;
+    padding: 60px 0;
+    margin-top: 65px;
+    /*Временно для сетки*/
+    
+    min-height: 180px;
+}
+
+.product-photos {
+    width: 460px;
+    /*Временно для сетки*/
+
+    min-height: 677px;
+}
+
+.product-photos ul {
+    list-style: none;
+}
+
+.product-info {
+    width: 390px;
+    /*Временно для сетки*/
+
+    min-height: 667px;
+}
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin:0;
+    margin-right: 80px;
+    /*Временно для сетки*/
+    min-height: 100px;
+}
+
+.footer-social {
+    width: 145px;
+    /*Временно для сетки*/
+    min-height: 100px;
+}
+
+.footer-copyright {
+    width: 150px;
+    margin:0;
+    margin-left: auto;
+    /*Временно для сетки*/
+    min-height: 100px;
+}
+
+
+
+
